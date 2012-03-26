@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthDemo.ServiceModel", "AuthDemo.ServiceModel\AuthDemo.ServiceModel.csproj", "{DE3B40C4-7C6C-4C3C-BC07-F2E75BED7414}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthDemo.ServiceInterface", "AuthDemo.ServiceInterface\AuthDemo.ServiceInterface.csproj", "{A0819B6E-8968-4384-A0CA-25567C49D687}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthDemo.Host.Web", "AuthDemo.Host.Web\AuthDemo.Host.Web.csproj", "{9AFDB4D8-F8D5-4E7E-B618-5E72625D3C90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthDemo.ServiceDbAcces", "AuthDemo.ServiceDbAcces\AuthDemo.ServiceDbAcces.csproj", "{26CA8FB3-BBD8-4C2B-B44A-07901E91EC9E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+		STATIC_ONLY NO_EXPRESSIONS|Any CPU = STATIC_ONLY NO_EXPRESSIONS|Any CPU
+		MonoTouch|Any CPU = MonoTouch|Any CPU
+		DEBUG MONO|Any CPU = DEBUG MONO|Any CPU
+		MONOTOUCH|Any CPU = MONOTOUCH|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26CA8FB3-BBD8-4C2B-B44A-07901E91EC9E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{26CA8FB3-BBD8-4C2B-B44A-07901E91EC9E}.Debug|x86.Build.0 = Debug|Any CPU
+		{26CA8FB3-BBD8-4C2B-B44A-07901E91EC9E}.Release|x86.ActiveCfg = Release|Any CPU
+		{26CA8FB3-BBD8-4C2B-B44A-07901E91EC9E}.Release|x86.Build.0 = Release|Any CPU
+		{9AFDB4D8-F8D5-4E7E-B618-5E72625D3C90}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9AFDB4D8-F8D5-4E7E-B618-5E72625D3C90}.Debug|x86.Build.0 = Debug|Any CPU
+		{9AFDB4D8-F8D5-4E7E-B618-5E72625D3C90}.Release|x86.ActiveCfg = Release|Any CPU
+		{9AFDB4D8-F8D5-4E7E-B618-5E72625D3C90}.Release|x86.Build.0 = Release|Any CPU
+		{A0819B6E-8968-4384-A0CA-25567C49D687}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A0819B6E-8968-4384-A0CA-25567C49D687}.Debug|x86.Build.0 = Debug|Any CPU
+		{A0819B6E-8968-4384-A0CA-25567C49D687}.Release|x86.ActiveCfg = Release|Any CPU
+		{A0819B6E-8968-4384-A0CA-25567C49D687}.Release|x86.Build.0 = Release|Any CPU
+		{DE3B40C4-7C6C-4C3C-BC07-F2E75BED7414}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DE3B40C4-7C6C-4C3C-BC07-F2E75BED7414}.Debug|x86.Build.0 = Debug|Any CPU
+		{DE3B40C4-7C6C-4C3C-BC07-F2E75BED7414}.Release|x86.ActiveCfg = Release|Any CPU
+		{DE3B40C4-7C6C-4C3C-BC07-F2E75BED7414}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = AuthDemo.Host.Web\AuthDemo.Host.Web.csproj
+	EndGlobalSection
+EndGlobal
