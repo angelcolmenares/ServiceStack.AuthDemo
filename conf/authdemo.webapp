@@ -1,0 +1,19 @@
+<apps>
+
+<web-application>
+	<name>AuthDemo Service</name>
+	<vpath>/</vpath>
+	<path>/home/angel/Projects/github/ServiceStack.AuthDemo/src/AuthDemo.Host.Web</path>
+	<enabled>true</enabled>
+	<port>8080</port>
+</web-application>
+
+<web-application>
+	<name>AuthDemo App</name>
+	<vpath>/webapp</vpath>
+	<path>/home/angel/Projects/github/ServiceStack.AuthDemo/src/AuthDemo.WebApp</path>
+	<enabled>true</enabled>
+	<port>8080</port>
+</web-application>
+
+</apps>
