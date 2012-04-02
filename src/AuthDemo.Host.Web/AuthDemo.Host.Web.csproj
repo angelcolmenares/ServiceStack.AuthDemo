@@ -10,6 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>AuthDemo.Host.Web</RootNamespace>
     <AssemblyName>AuthDemo.Host.Web</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

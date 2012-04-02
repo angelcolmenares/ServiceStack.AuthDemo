@@ -14,15 +14,20 @@ namespace AuthDemo.ServiceInterface
 
 		public AppConfig(IResourceManager resources)
 		{
-			PhotoDirectory = resources.Get<string>("PhotoDirectory","~/WebApp/photos/")
-				.MapHostAbsolutePath()
-				.Replace('\\', Path.DirectorySeparatorChar);		
+			RootDirectory = resources.GetString("RootDirectory");	
+			PhotoDirectory = resources.GetString("PhotoDirectory");
+			LibDirectory = resources.GetString("LibDirectory");
 		}
 
 		public string PhotoDirectory { get; set; }
+		public string RootDirectory { get; set; }
+		public string LibDirectory { get; set; }
 		
 	}
 }
-
+/*
+ .MapHostAbsolutePath()
+.Replace('\\', Path.DirectorySeparatorChar);		
+*/
 
 

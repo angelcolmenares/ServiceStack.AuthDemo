@@ -11,9 +11,6 @@ Demo includes:
 
 Any suggestions, contributions,  critics,  are welcome!
 
-Mono's users must  run xsp4.
-
-App is temporaly avalabile at http://aicl.no-ip.org:8080/WebApp/ ( sunday, monday and tuesday)
 
 Download extjs from 'http://www.sencha.com/products/extjs/' and install in :AuthDemo.Host.Web/WebApp/extjs
 

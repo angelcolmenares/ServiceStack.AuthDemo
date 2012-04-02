@@ -60,7 +60,7 @@ namespace AuthDemo.Host.Web
 			}
 							
 			
-			OrmLiteConfig.DialectProvider= GetDialectProvider();
+			OrmLiteConfig.DialectProvider= GetDialectProvider(config);
 			
 			IDbConnectionFactory dbFactory = new OrmLiteConnectionFactory(
 				ConfigUtils.GetConnectionString("ApplicationDb"));
@@ -195,16 +195,16 @@ namespace AuthDemo.Host.Web
 			}
 		}
 		
-		private  IOrmLiteDialectProvider GetDialectProvider()
+		private  IOrmLiteDialectProvider GetDialectProvider(AppConfig config)
 		{
 			var ds = ConfigUtils.GetDictionaryFromAppSetting("DialectProvider");						
 				
-			var assembly = Assembly.LoadFrom(Path.Combine(ds["PathToAssembly"], ds["AssemblyName"]));
+			var assembly = Assembly.LoadFrom(Path.Combine(config.LibDirectory, ds["AssemblyName"]));
 			var type = assembly.GetType(ds["ClassName"]);
 			if (type == null)
 				throw new Exception(
 					string.Format("Can not load type '{0}' from assembly '{1}'",
-						ds["ClassName"], Path.Combine(ds["PathToAssembly"], ds["AssemblyName"])));
+						ds["ClassName"], Path.Combine(config.LibDirectory , ds["AssemblyName"])));
 			
 			var fi = type.GetField(ds["InstanceFieldName"]);
 			if (fi == null)
