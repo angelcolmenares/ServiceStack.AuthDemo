@@ -281,23 +281,6 @@
 })();
     	
 
-Ext.data.Store.implement({
-    rejectChanges: function(){
-    	Ext.each(this.removed, function(record){
-   			this.insert(record.lastIndex || 0, record);
-  		}, this);
- 
-  		Ext.each(this.getUpdatedRecords(), function(record) {
-   			record.reject();
-  		}, this);
- 
-  		this.remove(this.getNewRecords());
-   		//this.each(function(record) {   		//	record.reject();  		//}, this);
-   		this.removed = [];
-    }
-});
-
-
 Ext.define('Aicl.data.Store',{
 	extend: 'Ext.data.Store',
     constructor: function(config){    	    	
@@ -336,6 +319,48 @@ Ext.define('Aicl.data.Store',{
     }
 });  
 
+
+
+Ext.data.Store.implement({
+    rejectChanges: function(){
+    	Ext.each(this.removed, function(record){
+   			this.insert(record.lastIndex || 0, record);
+  		}, this);
+ 
+  		Ext.each(this.getUpdatedRecords(), function(record) {
+   			record.reject();
+  		}, this);
+ 
+  		this.remove(this.getNewRecords());
+   		//this.each(function(record) {   		//	record.reject();  		//}, this);
+   		this.removed = [];
+    }
+});
+
+Ext.form.Panel.implement({
+    setFocus:function(item){
+    	var ff = item==undefined?this.items.items[1].name:Ext.isNumber(item)?this.items.items[item].name:item;
+    	this.getForm().findField(ff).focus(false,10);
+    }
+});
+
+
+
+/*Ext.data.Store.implement({
+	convertToDate:function(v){ 
+		console.log('converToDate', arguments);
+		return  Aicl.Util.convertToDate(v)
+	}
+});*/
+
+
+//Ext.define('Aicl.data.Model',{
+//	extend: 'Ext.data.Model',
+//convertToDate:function(v){ 
+//		console.log('converToDate', arguments);
+//		return  Aicl.Util.convertToDate(v)
+//	}
+//});
 
 /*
 responseText: ""

@@ -1,6 +1,6 @@
 Ext.Loader.setConfig({enabled: true});
 Ext.Loader.setPath('AD', '../app');
-Ext.require([	'Ext.tip.*']);
+Ext.require(['Ext.tip.*']);
 
 Ext.onReady(function(){
    
@@ -10,8 +10,8 @@ Ext.onReady(function(){
     name: 'AD',
     appFolder: '../app',
  
-    launch: function() {
-        Ext.create('Ext.form.Panel', {
+    launch: function(){
+        Ext.create('Ext.form.Panel',{
     	width:950,
         id:'panelModule',
         baseCls:'x-plain',
@@ -36,10 +36,11 @@ Ext.onReady(function(){
 				]	
 			}
         ]
-    });
+    	});
     },
-    controllers: ['Company'  ]
     
-});
-	    
+    controllers: ['Company']
+    
+	});
+	
 });
