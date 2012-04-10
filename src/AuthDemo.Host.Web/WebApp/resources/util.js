@@ -21,6 +21,10 @@
 		convertToUTC: function (date){
 			return Ext.Date.format(date,'MS');
 		},
+		
+		formatInt: function (value, format){
+			return this.formatNumber(value, ',0');		
+		},
 
 		formatNumber: function (value, format){
 			format= format|| ',0.00'; 
