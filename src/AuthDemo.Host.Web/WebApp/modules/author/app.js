@@ -1,5 +1,4 @@
 Ext.require(['*']);
-Ext.onReady(function() {
 		
 	Ext.create('Ext.form.Panel', {
 		frame: true,
@@ -34,7 +33,6 @@ Ext.onReady(function() {
                 }
             });
 
-});
 
 // {"ResponseStatus":{"ErrorCode":"Invalid UserName or
 // Password","Message":"Invalid UserName or Password","Errors":[]}}

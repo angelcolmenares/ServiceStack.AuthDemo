@@ -1,8 +1,6 @@
 Ext.Loader.setConfig({enabled: true});
 Ext.Loader.setPath('AD', '../app');
 Ext.require([	'Ext.tip.*']);
-
-Ext.onReady(function(){
    
     Ext.QuickTips.init();
     
@@ -56,4 +54,3 @@ Ext.onReady(function(){
     
 });
 	    
-});
