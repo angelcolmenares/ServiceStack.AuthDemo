@@ -142,7 +142,7 @@ namespace AuthDemo.Host.Web
 			
 			if ( authRepo.GetUserAuthByUserName(userName)== default(UserAuth) ){
 				List<string> roles= new List<string>();
-				roles.Add(AuthFeature.AdminRole);
+				roles.Add(RoleNames.Admin);
 			    string hash;
 			    string salt;
 			    new SaltedHash().GetHashAndSaltString(password, out hash, out salt);

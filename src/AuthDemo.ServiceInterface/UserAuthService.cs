@@ -21,7 +21,7 @@ namespace AuthDemo.ServiceInterface
 						
 			IAuthSession session = this.GetSession();
 			
-			if (!session.HasRole(AuthFeature.AdminRole))
+			if (!session.HasRole(RoleNames.Admin))
 			
 				return GetById( session.UserAuthId );
 			
