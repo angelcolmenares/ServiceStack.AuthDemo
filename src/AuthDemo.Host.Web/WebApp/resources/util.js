@@ -324,7 +324,7 @@ Ext.define('Aicl.data.Store',{
 });  
 
 
-
+/*
 Ext.data.Store.implement({
     rejectChanges: function(){
     	Ext.each(this.removed, function(record){
@@ -348,7 +348,7 @@ Ext.form.Panel.implement({
     }
 });
 
-
+*/
 
 /*Ext.data.Store.implement({
 	convertToDate:function(v){ 

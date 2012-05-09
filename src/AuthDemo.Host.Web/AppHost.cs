@@ -20,6 +20,7 @@ using ServiceStack.ServiceInterface;
 using ServiceStack.FluentValidation;
 using ServiceStack.MiniProfiler;
 using ServiceStack.MiniProfiler.Data;
+using ServiceStack.Text;
 
 using AuthDemo.ServiceInterface;
 using AuthDemo.ServiceDbAcces;
@@ -155,12 +156,15 @@ namespace AuthDemo.Host.Web
 			        PasswordHash = hash,
 			        Salt = salt,
 					Roles =roles,
-					Permissions=adminPermissions
+					Permissions=adminPermissions,
 			    }, password);
 			}
 			// user
 			userName="user1";
 			password="user1";
+			var meta= new Dictionary<string,string>();
+			meta.Add("ExpiresAt", DateTime.UtcNow.SerializeToString());
+			
 			if ( authRepo.GetUserAuthByUserName(userName)== default(UserAuth) ){
 				string hash;
 			    string salt;
@@ -173,7 +177,8 @@ namespace AuthDemo.Host.Web
 			        LastName = "",
 			        PasswordHash = hash,
 			        Salt = salt,
-					Permissions=userPermissions
+					Permissions=userPermissions,
+					Meta= meta
 				}, password);
 			}
 			
